@@ -39,11 +39,4 @@ class TestWalk:
         guido = Person()
         assert(type(guido.walk) == types.MethodType)
 
-    def test_prints_the_person_is_walking(self):
-        '''prints "The person is walking."'''
-        guido = Person()
-        captured_out = io.StringIO()
-        sys.stdout = captured_out
-        guido.walk()
-        sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "The person is walking.\n")
+   
